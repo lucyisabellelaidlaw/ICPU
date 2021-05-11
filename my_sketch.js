@@ -9,6 +9,9 @@ function setup() {
 function draw() {
   background(color(25, 191, 128));
 
+  fill(color(25, 191, 128));
+  rect(40, 0, windowWidth-40, mouseY);
+
   let spacing = windowWidth / 6;
   let xCoord = spacing;
   for(let i = 0; i < 5; i++) {
@@ -67,3 +70,7 @@ function drawBaseTree(treeNum, xCoord) {
     ellipse(xCoord+18, windowHeight-250, 30, 10);
   }
 }
+
+
+//We need leaves to appear and disappear based on the height of the tree, should not be too hard to figure something out
+//if mouse Y is above 50, show leaf 1, if mouse Y is above 70, show leaf one and two
